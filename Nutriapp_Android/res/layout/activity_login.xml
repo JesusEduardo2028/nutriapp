@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+	
+    <TabHost 
+        android:id="@android:id/tabhost" 
+		android:layout_width="270dp"
+		android:layout_height="350dp"
+		android:layout_centerHorizontal="true"
+		android:layout_centerVertical="true"
+		android:layout_marginTop="14dp" >
+		
+		<LinearLayout
+	        android:orientation="vertical"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" >
+			
+		    <TabWidget 
+		    	android:layout_width="match_parent" 
+		     	android:layout_height="wrap_content" 
+		    	android:id="@android:id/tabs" />
+<!-- 		    	android:tabStripEnabled="true" -->
+		     			
+		    <FrameLayout 
+		        android:id="@android:id/tabcontent"
+		        android:layout_width="match_parent" 
+		     	android:layout_height="match_parent" >
+		     	
+		     	<LinearLayout 
+		     	    android:id="@+id/tab1"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:gravity="center"
+					android:orientation="vertical" >
+		    		
+		     	    <EditText
+						android:id="@+id/inputUserLogin"
+					    android:layout_width="200dp"
+					    android:layout_height="30dp"
+					    android:ems="9"
+					    android:inputType="textEmailSubject"
+					    android:hint="@string/user_sign"
+					    android:textSize="13sp"
+					    android:drawableLeft="@drawable/social_person_holo"
+					    android:background="@drawable/input_textfield" />
+		     	       
+				 	<EditText
+					    android:id="@+id/inputPasswLogin"
+					    android:layout_width="200dp"
+					    android:layout_height="30dp"
+					    android:layout_marginTop="7dp"
+					    android:ems="9"
+					    android:inputType="textPassword"
+					    android:hint="@string/pass_sign"
+					    android:textSize="13sp"
+					    android:drawableLeft="@drawable/password_holo"
+					    android:background="@drawable/input_textfield" />
+					
+				 	<Button
+				 	    android:id="@+id/btnDymashapp"
+				 	    android:layout_width="200dp"
+				 	    android:layout_height="50dp"
+				 	    android:layout_marginTop="16dp"
+				 	    android:drawableTop="@drawable/button_ok"
+				 	    android:onClick="nutriappLogin" />
+				 	
+				    <TextView
+				        android:id="@+id/textForgot"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginTop="20dp"
+				        android:text="@string/forgot_pass"
+				        android:textSize="12sp" />
+				
+				</LinearLayout>
+				
+		     	<LinearLayout 
+		     	    android:id="@+id/tab2"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="vertical"
+					android:gravity="center" >
+		    		
+				 	<EditText
+					    android:id="@+id/inputUserRegister"
+				        android:layout_width="200dp"
+				        android:layout_height="30dp"
+				        android:ems="9"
+				        android:inputType="text"
+				        android:hint="@string/user_name"
+				        android:textSize="13sp"
+					    android:drawableLeft="@drawable/social_person_holo"
+					    android:background="@drawable/input_textfield" />
+				 	
+				 	<EditText
+					    android:id="@+id/inputEmailRegister"
+				        android:layout_width="200dp"
+				        android:layout_height="30dp"
+				        android:layout_marginTop="7dp"
+				        android:ems="9"
+				        android:inputType="textEmailAddress"
+				        android:hint="@string/user_email"
+				        android:textSize="13sp"
+					    android:drawableLeft="@drawable/content_email_holo"
+					    android:background="@drawable/input_textfield" />
+				 	
+				 	<EditText
+					    android:id="@+id/inputPasswRegister"
+				        android:layout_width="200dp"
+				        android:layout_height="30dp"
+				        android:layout_marginTop="7dp"
+				        android:ems="9"
+				        android:inputType="textPassword"
+				        android:hint="@string/pass_sign"
+				        android:textSize="13sp"
+					    android:drawableLeft="@drawable/password_holo"
+					    android:background="@drawable/input_textfield" />
+		    		
+				 	<Button
+				 	    android:id="@+id/btnRegister"
+				 	    android:layout_width="200dp"
+				 	    android:layout_height="50dp"
+				 	    android:layout_marginTop="20dp"
+				 	    android:drawableTop="@drawable/button_ok"
+				 	    android:onClick="nutriappRegister" />
+				 	
+				</LinearLayout>
+		    	
+			</FrameLayout>
+		   	
+		</LinearLayout>
+	   	
+	</TabHost>
+    
+</RelativeLayout>
