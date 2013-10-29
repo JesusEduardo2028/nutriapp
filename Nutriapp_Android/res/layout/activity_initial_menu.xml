@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingTop="100dp" >
+	
+    <Button 
+    	android:id="@+id/botonPersonalizacion"
+    	android:layout_width="250dp"
+    	android:layout_height="100dp"
+    	android:text="@string/btn_personalizacion"
+    	android:onClick="dietaPersonalizada" />
+    
+    <Button 
+    	android:id="@+id/botonRecetas"
+    	android:layout_width="250dp"
+    	android:layout_height="100dp"
+    	android:layout_below="@+id/botonPersonalizacion"
+    	android:text="@string/btn_recetas"
+    	android:onClick="buscarRecetas" />
+	
+    <CheckBox
+        android:id="@+id/checkBoxConfigInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="14dp"
+        android:paddingBottom="30dp" />
+    
+    <TextView
+        android:id="@+id/labelConfigInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/botonRecetas"
+        android:layout_alignTop="@+id/checkBoxConfigInicial"
+        android:layout_toRightOf="@+id/checkBoxConfigInicial"
+        android:gravity="center_vertical"
+        android:paddingLeft="13dp"
+        android:text="@string/checbox_config_inicial"
+        android:textSize="14sp" />
+    
+</RelativeLayout>
