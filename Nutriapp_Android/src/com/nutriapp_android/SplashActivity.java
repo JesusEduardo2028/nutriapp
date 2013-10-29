@@ -37,14 +37,18 @@ public class SplashActivity extends Activity {
 				SharedPreferencesHelper session = new SharedPreferencesHelper(SplashActivity.this);
 				Intent activityIntent = null;
 				
-				if(session.isExistKeyShared("user_id")) {
-					if(session.isExistKeyShared("save_mashup") && session.getStringShared("save_mashup").equals("false")) {
-						//activityIntent = new Intent(SplashActivity.this, EspecificMashupActivity.class);
+				if(session.isExistKeyShared("configuracion_inicial") && session.getStringShared("configuracion_inicial").equals("true")) {
+					if(session.getStringShared("configuracion_tipo").equals("dieta_personalizada")) {
+						if(session.isExistKeyShared("user_id")) {
+							//activityIntent = new Intent(SplashActivity.this, MainActivity.class);
+						} else {
+							activityIntent = new Intent(SplashActivity.this, LoginActivity.class);
+						}
 					} else {
-						activityIntent = new Intent(SplashActivity.this, ConfigurationActivity.class);
+						//activityIntent = new Intent(SplashActivity.this, SearchRecipesActivity.class);
 					}
 				} else {
-					activityIntent = new Intent(SplashActivity.this, LoginActivity.class); //LoginActivity
+					activityIntent = new Intent(SplashActivity.this, InitialMenuActivity.class); //LoginActivity
 				}
 				
 				startActivity(activityIntent);
