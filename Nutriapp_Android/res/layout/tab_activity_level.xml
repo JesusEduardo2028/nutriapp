@@ -1,0 +1,108 @@
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+  	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	android:paddingTop="20dp"
+  	android:paddingLeft="30dp"
+  	android:paddingRight="30dp" >
+  	
+  	<TextView
+  	    android:id="@+id/labelActividad"
+  	    android:layout_width="wrap_content"
+  	    android:layout_height="wrap_content"
+  	    android:layout_marginTop="14dp"
+  	    android:gravity="center_vertical"
+  	    android:text="@string/nivel_actividad"
+  	    android:textSize="13sp" />
+  	
+  	<RadioGroup
+		android:id="@+id/radioBtnActividad"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/labelActividad"
+		android:orientation="vertical" >
+		
+		<RadioButton
+			android:id="@+id/radioSendentario"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:checked="true"
+			android:text="Usuario sedentario"
+			android:textSize="12sp" />
+		
+		<RadioButton
+		    android:id="@+id/radioBaja"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Actividad baja"
+		    android:textSize="12sp" />
+		
+		<RadioButton
+		    android:id="@+id/radioActivo"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Usuario activo"
+		    android:textSize="12sp" />
+		
+		<RadioButton
+		    android:id="@+id/radioMuyActivo"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Usuario muy activo"
+		    android:textSize="12sp" />
+	</RadioGroup>
+	
+  	<TextView
+  	    android:id="@+id/labelObjetivos"
+  	    android:layout_width="wrap_content"
+  	    android:layout_height="wrap_content"
+  	    android:layout_below="@+id/radioBtnActividad"
+  	    android:layout_marginTop="20dp"
+  	    android:gravity="center_vertical"
+  	    android:text="@string/objetivo_usuario"
+  	    android:textSize="13sp" />
+  	
+  	<RadioGroup
+		android:id="@+id/radioBtnObjetivos"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/labelObjetivos"
+		android:orientation="vertical" >
+		
+		<RadioButton
+			android:id="@+id/radioPerderLentamente"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:checked="true"
+			android:text="Perder lentamente"
+			android:textSize="12sp" />
+		
+		<RadioButton
+		    android:id="@+id/radioPerderRapidamente"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Perder rapidamente"
+		    android:textSize="12sp" />
+		
+		<RadioButton
+		    android:id="@+id/radioGanarLentamente"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Aumentar lentamente"
+		    android:textSize="12sp" />
+		
+		<RadioButton
+		    android:id="@+id/radioGanarRapidamente"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Aumentar rapidamente"
+		    android:textSize="12sp" />
+		<RadioButton
+		    android:id="@+id/radioMantener"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Mantener peso"
+		    android:textSize="12sp" />
+	</RadioGroup>
+  	
+</RelativeLayout>

@@ -1,0 +1,203 @@
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+  	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	android:paddingTop="20dp"
+  	android:paddingLeft="30dp"
+  	android:paddingRight="30dp" >
+  	
+    <ImageView 
+        android:id="@+id/imagenPerfil"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/social_person_holo" 
+        android:contentDescription="@string/imagen_perfil"/>
+  	
+  	<TextView
+  	    android:id="@+id/labelGenero"
+  	    android:layout_width="100dp"
+  	    android:layout_height="wrap_content"
+  	    android:layout_alignTop="@+id/radioBtnGenero"
+  	    android:layout_alignBottom="@+id/radioBtnGenero"
+  	    android:gravity="center_vertical"
+  	    android:text="@string/genero_usuario"
+  	    android:textSize="13sp" />
+	
+	<RadioGroup
+		android:id="@+id/radioBtnGenero"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_below="@+id/imagenPerfil"
+		android:layout_toRightOf="@+id/labelGenero"
+		android:layout_marginTop="25dp" >
+		
+		<RadioButton
+			android:id="@+id/radioFemale"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:checked="true"
+			android:text="@string/genero_mujer"
+			android:textSize="12sp" />
+		
+		<RadioButton
+		    android:id="@+id/radioMale"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/genero_hombre"
+		    android:textSize="12sp" />
+	</RadioGroup>
+	
+	<TextView
+  	    android:id="@+id/labelPesoActual" 
+		android:layout_width="100dp" 
+		android:layout_height="wrap_content"
+		android:layout_alignTop="@+id/inputPesoActual"
+	    android:layout_alignBottom="@+id/inputPesoActual"
+		android:gravity="center_vertical"
+		android:text="@string/peso_actual"
+		android:textSize="13sp" />
+	
+	<TextView
+	    android:id="@+id/labelKgActual"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignTop="@+id/labelPesoActual"
+	    android:layout_alignBottom="@+id/labelPesoActual"
+	    android:layout_below="@+id/radioBtnGenero"
+	    android:gravity="center_vertical"
+	    android:text="@string/abreviatura_peso"
+	    android:textSize="12sp" />
+	
+	<EditText
+	    android:id="@+id/inputPesoActual"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/radioBtnGenero"
+	    android:layout_alignLeft="@+id/radioBtnGenero"
+	    android:layout_toLeftOf="@+id/labelKgActual"
+	    android:layout_marginTop="10dp"
+	    android:inputType="numberDecimal"
+	    android:textSize="13sp"
+	    android:ems="9" />
+  	
+	<TextView
+  	    android:id="@+id/labelPesoMeta" 
+		android:layout_width="100dp" 
+		android:layout_height="wrap_content"
+		android:layout_alignTop="@+id/inputPesoMeta"
+	    android:layout_alignBottom="@+id/inputPesoMeta"
+		android:gravity="center_vertical"
+		android:text="@string/peso_meta"
+		android:textSize="13sp" />
+	
+	<TextView
+	    android:id="@+id/labelKgMeta"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignTop="@+id/labelPesoMeta"
+	    android:layout_alignBottom="@+id/labelPesoMeta"
+	    android:layout_below="@+id/inputPesoActual"
+	    android:gravity="center_vertical"
+	    android:text="@string/abreviatura_peso"
+	    android:textSize="12sp" />
+	
+	<EditText
+	    android:id="@+id/inputPesoMeta"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/inputPesoActual"
+	    android:layout_alignLeft="@+id/radioBtnGenero"
+	    android:layout_toLeftOf="@+id/labelKgMeta"
+	    android:layout_marginTop="10dp"
+	    android:inputType="numberDecimal"
+	    android:textSize="13sp"
+	    android:ems="9" />
+	
+	<TextView
+  	    android:id="@+id/labelEstatura" 
+		android:layout_width="100dp" 
+		android:layout_height="wrap_content"
+		android:layout_alignTop="@+id/inputEstatura"
+	    android:layout_alignBottom="@+id/inputEstatura"
+		android:gravity="center_vertical"
+		android:text="@string/estatura"
+		android:textSize="13sp" />
+	
+	<TextView
+	    android:id="@+id/labelMtAltura"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_alignTop="@+id/labelEstatura"
+	    android:layout_alignBottom="@+id/labelEstatura"
+	    android:layout_below="@+id/inputPesoMeta"
+	    android:gravity="center_vertical"
+	    android:text="@string/abreviatura_altura"
+	    android:textSize="12sp" />
+	
+	<EditText
+	    android:id="@+id/inputEstatura"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/inputPesoMeta"
+	    android:layout_alignLeft="@+id/radioBtnGenero"
+	    android:layout_toLeftOf="@+id/labelMtAltura"
+	    android:layout_marginTop="10dp"
+	    android:inputType="numberDecimal"
+	    android:textSize="13sp"
+	    android:ems="9" />
+	
+	<TextView
+  	    android:id="@+id/labelFechaNacimiento" 
+		android:layout_width="100dp" 
+		android:layout_height="wrap_content"
+		android:layout_alignTop="@+id/inputFechaNacimiento"
+	    android:layout_alignBottom="@+id/inputFechaNacimiento"
+		android:gravity="center_vertical"
+		android:text="@string/fecha_nacimiento"
+		android:textSize="13sp" />
+	
+	<EditText
+	    android:id="@+id/inputFechaNacimiento"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/inputEstatura"
+	    android:layout_alignLeft="@+id/radioBtnGenero"
+	    android:layout_toLeftOf="@+id/btnFechaNacimiento"
+	    android:layout_marginTop="10dp"
+	    android:inputType="date"
+	    android:textSize="13sp"
+	    android:ems="9" />
+	
+	<Button
+	    android:id="@+id/btnFechaNacimiento"
+	    android:layout_width="40dp"
+	    android:layout_height="40dp"
+	   	android:layout_alignParentRight="true"
+	    android:layout_alignTop="@+id/labelFechaNacimiento"
+	    android:layout_alignBottom="@+id/labelFechaNacimiento" />
+	
+	<TextView
+  	    android:id="@+id/labelSalud" 
+		android:layout_width="100dp" 
+		android:layout_height="wrap_content"
+		android:layout_alignTop="@+id/inputEstadoSalud"
+	    android:layout_alignBottom="@+id/inputEstadoSalud"
+		android:gravity="center_vertical"
+		android:text="@string/estado_salud"
+		android:textSize="13sp" />
+	
+	<com.nutriapp_android.adapter.MultiSpinnerAdapter
+	    android:id="@+id/inputEstadoSalud"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/radioBtnGenero"
+	    android:layout_alignRight="@+id/btnFechaNacimiento"
+	    android:layout_below="@+id/inputFechaNacimiento"
+	    android:layout_marginTop="7dp" />
+		
+</RelativeLayout>
