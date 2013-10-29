@@ -1,10 +1,10 @@
 package com.nutriapp_android;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.EditText;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,18 +40,19 @@ public class LoginActivity extends Activity {
 	}
 	
 	public void nutriappLogin(View v) {
-		EditText inputSignUser = (EditText) findViewById(R.id.inputUserLogin);
-		EditText inputSignPass = (EditText) findViewById(R.id.inputPasswLogin);
+		//EditText inputUserName = (EditText) findViewById(R.id.inputUserRegister);
 		
-		
+		Intent registerIntent = new Intent(this, ConfigurationProfileActivity.class);
+    	startActivity(registerIntent);
+    	finish();
 	}
 	
 	public void nutriappRegister(View v) {
-		EditText inputUserName = (EditText) findViewById(R.id.inputUserRegister);
-		EditText inputEmail = (EditText) findViewById(R.id.inputEmailRegister);
-		EditText inputPassw = (EditText) findViewById(R.id.inputPasswRegister);
+		//EditText inputUserName = (EditText) findViewById(R.id.inputUserRegister);
 		
-		
+		Intent registerIntent = new Intent(this, ConfigurationProfileActivity.class);
+    	startActivity(registerIntent);
+    	finish();
 	}
 
 }
