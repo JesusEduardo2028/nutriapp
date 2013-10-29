@@ -1,9 +1,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_settings"/>
+		android:id="@+id/itemGuardarPerfil"
+	    android:title="@string/guardar_perfil"
+	    android:icon="@drawable/content_save"
+	    android:showAsAction="always" />
+    
+    <item
+        android:id="@+id/itemAtras"
+        android:title="@string/navegacion_atras"
+        android:icon="@drawable/navigation_back"
+        android:showAsAction="always" />
+    
+    <item
+		android:id="@+id/itemSiguiente"
+	    android:title="@string/navegacion_siguiente"
+	    android:icon="@drawable/navigation_forward"
+	    android:showAsAction="always" />
 
 </menu>
