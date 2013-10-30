@@ -1,31 +1,34 @@
 package com.nutriapp_android;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
-import com.nutriapp_android.frgments.ProfileFragment;
+
+import com.nutriapp_android.frgments.MenuDelDiaFragment;
 
 public class MainActivity extends BaseActivity {
 
 	private Fragment contenido;
+	private ProgressDialog progressDialog;
+	private Fragment fragment;
+	public static MainActivity a;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setSlidingActionBarEnabled(true);
-
+		a = this;
 		if (savedInstanceState != null) {
 			contenido = getSupportFragmentManager().getFragment(
 					savedInstanceState, "contenido");
 		}
 		if (contenido == null) {
-			contenido = new ProfileFragment();
+			contenido = new MenuDelDiaFragment();
 		}
-		
 		setContentView(R.layout.layout_activity_main);
-		
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.content_frame, contenido).commit();
-
 	}
 
 	@Override
@@ -37,15 +40,31 @@ public class MainActivity extends BaseActivity {
 
 	public void switchContent(Fragment nuevoContenido) {
 		// TODO Auto-generated method stub
-
-		contenido = nuevoContenido;
-		Bundle args = new Bundle();
-		args.putString("tag_tab", "listas");
-		contenido.setArguments(args);
+		fragment = nuevoContenido;
 		getSupportFragmentManager().beginTransaction()
 				.replace(R.id.content_frame, nuevoContenido).commit();
 		getSlidingMenu().showContent();
+		if (nuevoContenido instanceof MenuDelDiaFragment) {
+			cargarPages();
+		}
 
 	}
 
+	private void cargarPages() {
+		// TODO Auto-generated method stub
+		progressDialog = new ProgressDialog(this);
+		progressDialog.setCancelable(false);
+		progressDialog.setMessage("Actualizando Recetas");
+		progressDialog.show();
+		
+		Handler handler = new Handler();
+		handler.postDelayed(new Runnable() {
+			public void run() {
+				// acciones que se ejecutan tras los milisegundos
+				progressDialog.dismiss();
+				MenuDelDiaFragment menu = (MenuDelDiaFragment) fragment;
+				menu.initialisePaging();
+			}
+		}, 2000);
+	}
 }

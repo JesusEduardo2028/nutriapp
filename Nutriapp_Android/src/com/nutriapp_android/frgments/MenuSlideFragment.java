@@ -30,10 +30,10 @@ public class MenuSlideFragment extends ListFragment {
 		super.onActivityCreated(savedInstanceState);
 		SampleAdapter adapter = new SampleAdapter(getActivity());
 
-		adapter.add(new SampleItem("perfil", android.R.drawable.ic_menu_add));
-		adapter.add(new SampleItem("listas", android.R.drawable.ic_menu_add));
-		adapter.add(new SampleItem("recomendacion",android.R.drawable.ic_input_get));
-		adapter.add(new SampleItem("configuracion",android.R.drawable.ic_menu_preferences));
+		adapter.add(new SampleItem("a", android.R.drawable.ic_menu_agenda));
+		adapter.add(new SampleItem("b", android.R.drawable.ic_menu_search));
+		adapter.add(new SampleItem("c",android.R.drawable.ic_menu_more));
+		adapter.add(new SampleItem("d",android.R.drawable.ic_menu_close_clear_cancel));
 
 		setListAdapter(adapter);
 	}
@@ -55,20 +55,20 @@ public class MenuSlideFragment extends ListFragment {
 			ImageView imagen = (ImageView) convertView
 					.findViewById(R.id.row_icon);
 
-			if (getItem(position).tag.equals("perfil")) {
-				texto.setText("Ver Dietas");
+			if (getItem(position).tag.equals("a")) {
+				texto.setText("Menu Diario");
 				imagen.setImageDrawable(getContext().getResources()
 						.getDrawable(getItem(position).iconRes));
-			} else if (getItem(position).tag.equals("recomendacion")) {
-				texto.setText("Recomendaciones");
+			} else if (getItem(position).tag.equals("b")) {
+				texto.setText("Buscar Receta");
 				imagen.setImageDrawable(getContext().getResources()
 						.getDrawable(getItem(position).iconRes));
-			} else if (getItem(position).tag.equals("configuracion")) {
-				texto.setText("Amigos");
+			} else if (getItem(position).tag.equals("c")) {
+				texto.setText("Buscar Restaurante");
 				imagen.setImageDrawable(getContext().getResources()
 						.getDrawable(getItem(position).iconRes));
-			} else if (getItem(position).tag.equals("listas")) {
-				texto.setText("Mis Listas");
+			} else if (getItem(position).tag.equals("d")) {
+				texto.setText("Salir");
 				imagen.setImageDrawable(getContext().getResources()
 						.getDrawable(getItem(position).iconRes));
 			}
@@ -84,12 +84,14 @@ public class MenuSlideFragment extends ListFragment {
 
 		switch (position) {
 		 case 0:
-		 nuevoContenido = new ProfileFragment();
-		 switchFragment(nuevoContenido);break;
+		  nuevoContenido = new MenuDelDiaFragment();
+		 switchFragment(nuevoContenido);
+		 
+		 break;
 
-		// case 1:
-		// nuevoContenido = new ContenedorTabla();
-		// switchFragment(nuevoContenido);break;
+		case 1:
+		 nuevoContenido = new BusquedaRecetaFragment();
+		 switchFragment(nuevoContenido);break;
 		case 2:
 			// nuevoContenido = new RecomendadorFragment();
 			// switchFragment(nuevoContenido);break;
