@@ -41,7 +41,6 @@ public class LoginActivity extends Activity {
 	
 	public void nutriappLogin(View v) {
 		//EditText inputUserName = (EditText) findViewById(R.id.inputUserRegister);
-		
 		Intent registerIntent = new Intent(this, ConfigurationProfileActivity.class);
     	startActivity(registerIntent);
     	finish();
@@ -49,7 +48,6 @@ public class LoginActivity extends Activity {
 	
 	public void nutriappRegister(View v) {
 		//EditText inputUserName = (EditText) findViewById(R.id.inputUserRegister);
-		
 		Intent registerIntent = new Intent(this, ConfigurationProfileActivity.class);
     	startActivity(registerIntent);
     	finish();

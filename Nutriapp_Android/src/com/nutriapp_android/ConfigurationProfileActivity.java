@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Vector;
 
 import com.nutriapp_android.adapter.PagerAdapter;
+import com.nutriapp_android.frgments.ActivityLevelPage;
+import com.nutriapp_android.frgments.UserProfilePage;
 import com.nutriapp_android.internal_storage.SharedPreferencesHelper;
 
 import android.app.ActionBar;

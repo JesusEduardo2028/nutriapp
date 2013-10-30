@@ -19,7 +19,6 @@ public class InitialMenuActivity extends Activity {
 		setContentView(R.layout.activity_initial_menu);
 		
 		config_inicial = (CheckBox) findViewById(R.id.checkBoxConfigInicial);
-		
 		shared_preference = new SharedPreferencesHelper(this);
 	}
 	
@@ -39,10 +38,7 @@ public class InitialMenuActivity extends Activity {
 			shared_preference.writeStringShared("configuracion_inicial", "true");
 			shared_preference.writeStringShared("configuracion_tipo", "buscar_receta");
 		}
-		
-		/*Intent registerIntent = new Intent(this, SearchRecipesActivity.class);
-    	startActivity(registerIntent);
-    	finish();*/
 	}
 
+	
 }

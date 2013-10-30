@@ -1,7 +1,10 @@
-package com.nutriapp_android;
+package com.nutriapp_android.frgments;
 
 import java.util.Calendar;
 
+import com.nutriapp_android.R;
+import com.nutriapp_android.R.id;
+import com.nutriapp_android.R.layout;
 import com.nutriapp_android.adapter.MultiSpinnerAdapter;
 
 import android.annotation.SuppressLint;
@@ -44,7 +47,7 @@ public class UserProfilePage extends Fragment {
 			}
 		});
         
-        String[] array_salud = {"Corazon","Diabetis","Riñon","Otros","Ninguno"};  
+        String[] array_salud = {"Corazon","Diabetis","Riï¿½on","Otros","Ninguno"};  
         estado_salud = (MultiSpinnerAdapter) view.findViewById(R.id.inputEstadoSalud);  
         estado_salud.setItems(array_salud);
         

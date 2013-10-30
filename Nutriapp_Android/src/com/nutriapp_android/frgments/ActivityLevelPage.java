@@ -1,4 +1,8 @@
-package com.nutriapp_android;
+package com.nutriapp_android.frgments;
+
+import com.nutriapp_android.R;
+import com.nutriapp_android.R.id;
+import com.nutriapp_android.R.layout;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
