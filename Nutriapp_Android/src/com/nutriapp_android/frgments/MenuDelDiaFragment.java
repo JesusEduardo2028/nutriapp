@@ -42,7 +42,7 @@ public class MenuDelDiaFragment extends Fragment {
 		// TODO Auto-generated method stub
 	
 		 a = (FragmentActivity) activity;
-
+		 
 		super.onAttach(activity);
 	}
 
@@ -121,6 +121,7 @@ public class MenuDelDiaFragment extends Fragment {
 		return lista;
 	}
 	
+
 
 }
 

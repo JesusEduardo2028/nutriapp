@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 
+import com.nutriapp_android.frgments.InfoRecetasFragment;
 import com.nutriapp_android.frgments.MenuDelDiaFragment;
+import com.nutriapp_android.frgments.RecetaListItemFragment.InterfazSeleccionReceta;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements InterfazSeleccionReceta {
 
 	private Fragment contenido;
 	private ProgressDialog progressDialog;
@@ -65,6 +67,29 @@ public class MainActivity extends BaseActivity {
 				MenuDelDiaFragment menu = (MenuDelDiaFragment) fragment;
 				menu.initialisePaging();
 			}
-		}, 2000);
+		}, 1000);
 	}
+
+	@Override
+	public void recetaSeleccionada(Integer comida) {
+		// TODO Auto-generated method stub
+		
+		fragment = new InfoRecetasFragment();
+		Bundle bundle = new Bundle();
+		bundle.putInt("comida", comida);
+		fragment.setArguments(bundle);
+		getSupportFragmentManager().beginTransaction()
+				.replace(R.id.content_frame, fragment).addToBackStack(null).commit();
+	}
+
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+		fragment = new MenuDelDiaFragment();
+		getSupportFragmentManager().beginTransaction()
+				.replace(R.id.content_frame, fragment).addToBackStack(null).commit();
+		cargarPages();
+	}
+	
+	
 }

@@ -12,15 +12,11 @@ import android.view.ViewGroup;
 import android.widget.RadioGroup;
 
 public class BusquedaRecetaFragment extends Fragment {
-	public static RadioGroup actividades;
-	public static RadioGroup objetivos;
+
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout_busqueda_fragment, container, false);
-        
-       
-        
         return view;
     }
 	
