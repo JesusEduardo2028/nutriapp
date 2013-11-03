@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal" >
+    
+    <TextView
+        android:id="@+id/emblemQuery"
+        android:layout_width="160dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="34dp"
+        android:text="@string/filtro_receta"
+        android:textSize="32sp" />
+    
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/emblemQuery"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_textfield" >
+        
+        <com.nutriapp_android.adapter.MultiSpinnerAdapter
+            android:id="@+id/inputFiltroReceta"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/botonFiltro"
+            android:background="@null"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+        
+        <ImageButton
+            android:id="@+id/botonFiltro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:contentDescription="@string/buscar_receta"
+            android:src="@drawable/action_search_holo" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

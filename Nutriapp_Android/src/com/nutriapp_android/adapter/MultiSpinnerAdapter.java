@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.json.JSONArray;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -139,18 +141,18 @@ public class MultiSpinnerAdapter extends Spinner implements OnMultiChoiceClickLi
 		}  
 		
 		return selection;  
-	}  
+	} 
 	
-	public List<Integer> getSelectedStringsPositions() {  
-		List<Integer> selection = new LinkedList<Integer>();  
+	public JSONArray getSelectedJsonIndicies() {  
+		JSONArray json = new JSONArray(); 
 		
 		for (int i = 0; i < _items.length; ++i) {  
 			if (mSelection[i]) {  
-				selection.add(i);  
+				json.put(i);  
 			}  
 		}
 		
-		return selection;  
+		return json;  
 	}  
 	
 	public List<Integer> getSelectedIndicies() {  

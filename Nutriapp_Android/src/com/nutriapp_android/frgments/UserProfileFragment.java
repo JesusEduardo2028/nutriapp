@@ -3,9 +3,8 @@ package com.nutriapp_android.frgments;
 import java.util.Calendar;
 
 import com.nutriapp_android.R;
-import com.nutriapp_android.R.id;
-import com.nutriapp_android.R.layout;
 import com.nutriapp_android.adapter.MultiSpinnerAdapter;
+import static com.nutriapp_android.config.ConstantsClient.ARRAY_SALUD;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
@@ -22,7 +21,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
-public class UserProfilePage extends Fragment {
+public class UserProfileFragment extends Fragment {
 	public static EditText fecha_nacimiento, peso_actual, peso_meta, estatura;
 	public static RadioButton sexo;
 	public static MultiSpinnerAdapter estado_salud;
@@ -30,7 +29,7 @@ public class UserProfilePage extends Fragment {
 	
 	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.tab_user_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_user_profile, container, false);
         
         sexo = (RadioButton) view.findViewById(R.id.radioFemale);
         peso_actual = (EditText) view.findViewById(R.id.inputPesoActual);
@@ -46,10 +45,9 @@ public class UserProfilePage extends Fragment {
 				newFragment.show(getActivity().getSupportFragmentManager(), "DatePicker");
 			}
 		});
-        
-        String[] array_salud = {"Corazon","Diabetis","Ri�on","Otros","Ninguno"};  
+          
         estado_salud = (MultiSpinnerAdapter) view.findViewById(R.id.inputEstadoSalud);  
-        estado_salud.setItems(array_salud);
+        estado_salud.setItems(ARRAY_SALUD);
         
         seleccionarFechaActual();
         

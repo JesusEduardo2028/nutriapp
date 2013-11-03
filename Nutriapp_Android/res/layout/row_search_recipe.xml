@@ -1,0 +1,71 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp" 
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/abs__ab_bottom_solid_light_holo">
+	
+    <ImageView
+        android:id="@+id/imageRecetaBus"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/desayuno" />
+	
+    <LinearLayout
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|bottom" >
+		
+    	<TextView
+	        android:id="@+id/tituloRecetaBus"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="Nombre Plato"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+			
+        	<TextView
+            	android:id="@+id/cRecetaBus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="C: 100"
+                android:textColor="@android:color/holo_blue_bright" 
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+			
+        	<TextView
+                android:id="@+id/sRecetaBus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="S: 300"
+              	android:layout_marginLeft="10dp"
+                android:textColor="@android:color/holo_green_dark" />
+			
+        	<TextView
+                android:id="@+id/fRecetaBus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="F: 200"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+			
+   		</LinearLayout>
+
+        <Button
+        	android:id="@+id/verRecetaBus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ver" />
+		
+	</LinearLayout>
+
+</LinearLayout>

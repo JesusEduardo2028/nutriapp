@@ -58,8 +58,8 @@ public class RecetaListItemFragment extends Fragment {
 		
 		switch (comida) {
 		case 1:
-		textView_nombre_receta.setText("nombre desa");
-		imageView_receta.setImageResource(R.drawable.desayuno);
+			textView_nombre_receta.setText("nombre desa");
+			imageView_receta.setImageResource(R.drawable.desayuno);
 			break;
 		case 2:
 			textView_nombre_receta.setText("nombre nueve");

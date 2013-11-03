@@ -1,15 +1,12 @@
 package com.nutriapp_android.frgments;
 
 import com.nutriapp_android.R;
-import com.nutriapp_android.R.id;
-import com.nutriapp_android.R.layout;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioGroup;
 
 public class BusquedaRecetaFragment extends Fragment {
 

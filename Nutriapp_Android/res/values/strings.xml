@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	
+	<!-- Aplicacion -->
     <string name="app_name">Nutriapp_Android</string>
     <string name="titulo_actionbar">NUTRIAPP</string>
     <string name="action_settings">Settings</string>
+    
+    <!-- Menu inicial -->
     <string name="btn_personalizacion">DIETA PERSONALIZADA</string>
     <string name="btn_recetas">BUSCAR RECETAS</string>
     <string name="checbox_config_inicial">Mostrar siempre al iniciar</string>
+    
+    <!-- Busqueda recetas -->
+    <string name="filtro_receta">Realiza un filtro sobre la comida que deseas!!!</string>
+    <string name="buscar_receta">Buscar receta</string>
+    <string-array name="array_busqueda">
+        <item >Desayuno</item>
+        <item >Nueves</item>
+        <item >Almuerzo</item>
+        <item >Onces</item>
+        <item >Cena</item>
+        <item >Todas</item>
+    </string-array>
+    
+    <!-- Inicio de sesion y registro -->
     <string name="usuario_login">Correo or Nombre de usuario</string>
     <string name="contrasena">Contraseña</string>
     <string name="olvido_contrasena"><u>¿Olvido su contraseña?</u></string>
     <string name="usuario_registro">Nombre de usuario</string>
     <string name="correo">Correo electronico</string>
+    
+    <!-- dieta personalizada - configuracion perfil -->
     <string name="navegacion_atras">Anterior configuracion</string>
     <string name="navegacion_siguiente">Siguiente configuracion</string>
     <string name="guardar_perfil">Guardar Informacion</string>
@@ -27,12 +46,12 @@
     <string name="abreviatura_peso">Kg</string>
     <string name="abreviatura_altura">Mt</string>
     <string name="nivel_actividad">Nivel de Actividad:</string>
-    <!-- <string name="actividad_sedentario">Usuario sedentario</string> -->
-    <!-- <string name="actividad_baja">Actividad baja</string> -->
-    <!-- <string name="actividad_activo">Usuario activo</string> -->
-    <!-- <string name="actividad_muy_activo">Usuario muy activo</string> -->
     <string name="objetivo_usuario">Objetivo de la dieta:</string>
+    
+    <!-- dieta personalizada - menu diario -->
     <string name="title_activity_main">MainActivity</string>
     <string name="hello_world">Hello world!</string>
+    
+    
 
 </resources>

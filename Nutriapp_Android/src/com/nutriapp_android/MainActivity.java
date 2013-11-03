@@ -1,5 +1,6 @@
 package com.nutriapp_android;
 
+import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,7 +11,8 @@ import com.nutriapp_android.frgments.MenuDelDiaFragment;
 import com.nutriapp_android.frgments.RecetaListItemFragment.InterfazSeleccionReceta;
 
 public class MainActivity extends BaseActivity implements InterfazSeleccionReceta {
-
+	//private boolean RECETAS_MENU = false; 
+	
 	private Fragment contenido;
 	private ProgressDialog progressDialog;
 	private Fragment fragment;
@@ -19,7 +21,12 @@ public class MainActivity extends BaseActivity implements InterfazSeleccionRecet
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		ActionBar actionBar = getActionBar();
+        actionBar.setDisplayShowHomeEnabled(false);
+        actionBar.setTitle(R.string.titulo_actionbar);
 		setSlidingActionBarEnabled(true);
+		
 		a = this;
 		if (savedInstanceState != null) {
 			contenido = getSupportFragmentManager().getFragment(
@@ -49,7 +56,7 @@ public class MainActivity extends BaseActivity implements InterfazSeleccionRecet
 		if (nuevoContenido instanceof MenuDelDiaFragment) {
 			cargarPages();
 		}
-
+		
 	}
 
 	private void cargarPages() {

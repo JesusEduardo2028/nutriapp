@@ -28,17 +28,20 @@ public class InitialMenuActivity extends Activity {
 			shared_preference.writeStringShared("configuracion_tipo", "dieta_personalizada");
 		}
 		
-		Intent registerIntent = new Intent(this, LoginActivity.class);
-    	startActivity(registerIntent);
+		Intent dietaPersonalizada = new Intent(this, LoginActivity.class);
+    	startActivity(dietaPersonalizada);
     	finish();
 	}
 	
-	public void botonRecetas(View v) {		
+	public void buscarRecetas(View v) {
 		if(config_inicial.isChecked()) {
 			shared_preference.writeStringShared("configuracion_inicial", "true");
 			shared_preference.writeStringShared("configuracion_tipo", "buscar_receta");
 		}
+		
+		Intent searchRecipe = new Intent(this, SearchFilterSRActivity.class);
+    	startActivity(searchRecipe);
+    	finish();
 	}
 
-	
 }

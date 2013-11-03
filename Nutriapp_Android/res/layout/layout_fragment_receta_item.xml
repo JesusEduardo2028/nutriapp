@@ -6,30 +6,30 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp" 
+        android:layout_height="120dp" 
         android:gravity="center_vertical"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
+        android:orientation="horizontal"
         android:background="@drawable/abs__ab_bottom_solid_light_holo">
 
         <ImageView
             android:id="@+id/imageView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/abs__ic_ab_back_holo_light" />
+            android:layout_width="20dp"
+            android:layout_height="40dp"
+            android:src="@drawable/navigation_previous_item" />
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:src="@drawable/desayuno" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center_horizontal|bottom"
-             >
+            android:gravity="center_horizontal|bottom" >
 
             <TextView
                 android:id="@+id/textView1"
@@ -78,8 +78,12 @@
                 android:text="ver" />
 
         </LinearLayout>
-
-        
+		
+<!--         <ImageView -->
+<!--             android:id="@+id/imageViewfollow" -->
+<!--             android:layout_width="20dp" -->
+<!--             android:layout_height="40dp" -->
+<!--             android:src="@drawable/navigation_next_item" /> -->
 
     </LinearLayout>
     

@@ -26,7 +26,7 @@ public class SplashActivity extends Activity {
 			finish();
 		} else {
 			Handler handler = new Handler();
-			handler.postDelayed(getMyRunnable(), 4000);
+			handler.postDelayed(getMyRunnable(), 2500);
 		}
 	}
 	
@@ -40,15 +40,15 @@ public class SplashActivity extends Activity {
 				if(session.isExistKeyShared("configuracion_inicial") && session.getStringShared("configuracion_inicial").equals("true")) {
 					if(session.getStringShared("configuracion_tipo").equals("dieta_personalizada")) {
 						if(session.isExistKeyShared("user_id")) {
-							//activityIntent = new Intent(SplashActivity.this, MainActivity.class);
+							activityIntent = new Intent(SplashActivity.this, MainActivity.class);
 						} else {
 							activityIntent = new Intent(SplashActivity.this, LoginActivity.class);
 						}
 					} else {
-						//activityIntent = new Intent(SplashActivity.this, SearchRecipesActivity.class);
+						activityIntent = new Intent(SplashActivity.this, SearchRecipesActivity.class);
 					}
 				} else {
-					activityIntent = new Intent(SplashActivity.this, InitialMenuActivity.class); //LoginActivity
+					activityIntent = new Intent(SplashActivity.this, InitialMenuActivity.class);
 				}
 				
 				startActivity(activityIntent);

@@ -17,8 +17,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-         >
+        android:label="@string/app_name" >
         <activity
             android:name="com.nutriapp_android.SplashActivity"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
@@ -34,6 +33,22 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
         </activity>
+        
+        <!--    Actividades - busqueda de recetas -->
+        <activity
+            android:name="com.nutriapp_android.SearchFilterSRActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        </activity>
+        <activity
+            android:name="com.nutriapp_android.SearchRecipesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
+        </activity>
+        
+        <!--    Actividades - dieta personalizada -->
         <activity
             android:name="com.nutriapp_android.LoginActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -52,6 +67,7 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.DarkActionBar">
         </activity>
+        
     </application>
 
 </manifest>

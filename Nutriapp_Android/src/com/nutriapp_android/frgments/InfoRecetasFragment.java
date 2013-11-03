@@ -1,8 +1,6 @@
 package com.nutriapp_android.frgments;
 
 import com.nutriapp_android.R;
-import com.nutriapp_android.R.id;
-import com.nutriapp_android.R.layout;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,8 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RadioGroup;
-import android.widget.TextView;
 
 public class InfoRecetasFragment extends Fragment {
 
@@ -24,9 +20,9 @@ public class InfoRecetasFragment extends Fragment {
         View view = inflater.inflate(R.layout.layout_info_fragment, container, false);
         
         final Integer comida = getArguments().getInt("comida");
-       
+        
 		imageView_receta = (ImageView) view.findViewById(R.id.imageView1);
-
+		
 		switch (comida) {
 		case 1:
 	
