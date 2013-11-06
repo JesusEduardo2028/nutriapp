@@ -47,6 +47,12 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
         </activity>
+        <activity
+            android:name="com.nutriapp_android.RecipeDetailsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" >
+        </activity>
         
         <!--    Actividades - dieta personalizada -->
         <activity

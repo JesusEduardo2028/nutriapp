@@ -38,7 +38,7 @@ public class RecetaListItemFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		final Integer comida = getArguments().getInt("comida");
-
+		
 		View view = inflater.inflate(R.layout.layout_fragment_receta_item, container,
 				false);
 

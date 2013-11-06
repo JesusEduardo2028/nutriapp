@@ -10,8 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 public class BusquedaRecetasAdapter extends ArrayAdapter<RecetaObject> {
@@ -32,34 +32,56 @@ public class BusquedaRecetasAdapter extends ArrayAdapter<RecetaObject> {
         
         final RecetaObject i = super.getItem(position);
         
-        ImageView image = (ImageView) view.findViewById(R.id.imageRecetaBus);
-        TextView titulo = (TextView) view.findViewById(R.id.tituloRecetaBus);
-        Button receta = (Button) view.findViewById(R.id.verRecetaBus);
+        ImageView image_receta = (ImageView) view.findViewById(R.id.imagenReceta);
+        ImageView tipo_receta = (ImageView) view.findViewById(R.id.imagenTipo);
+        TextView titulo = (TextView) view.findViewById(R.id.tituloReceta);
+        TextView restaurante = (TextView) view.findViewById(R.id.nombreRestaurante);
+        TextView calorias = (TextView) view.findViewById(R.id.caloriasReceta);
+        TextView sodio = (TextView) view.findViewById(R.id.sodioReceta);
+        TextView fibra = (TextView) view.findViewById(R.id.fibraReceta);
+        RatingBar puntaje = (RatingBar) view.findViewById(R.id.puntajeReceta);
+        TextView precio = (TextView) view.findViewById(R.id.precioReceta);
         
-        titulo.setText(i.getRecetaTitulo());
-		switch(i.getRecetaTipo()) {
+        titulo.setText(i.getTituloReceta());
+        calorias.setText("C: "+i.getCaloriasReceta());
+        sodio.setText("S: "+i.getSodioReceta());
+        fibra.setText("F: "+i.getFibraReceta());
+        puntaje.setRating((float) i.getCalificacionReceta());
+        
+        switch(i.getTipoReceta()) {
 			case 1:
-				image.setImageResource(R.drawable.desayuno);
+				tipo_receta.setImageResource(R.drawable.desayuno);
+				restaurante.setVisibility(View.VISIBLE);
+				restaurante.setText(i.getNombreRestaurante());
+				precio.setVisibility(View.VISIBLE);
+				precio.setText("$ "+i.getPrecioReceta());
 				break;
 			case 2:
-				image.setImageResource(R.drawable.nueve);
+				tipo_receta.setImageResource(R.drawable.cena);
+				restaurante.setVisibility(View.GONE);
+				precio.setVisibility(View.GONE);
+				break;
+		}
+        
+		switch(i.getTipoComida()) {
+			case 1:
+				image_receta.setImageResource(R.drawable.desayuno);
+				break;
+			case 2:
+				image_receta.setImageResource(R.drawable.nueve);
 				break;
 			case 3:
-				image.setImageResource(R.drawable.almuerzo);
+				image_receta.setImageResource(R.drawable.almuerzo);
 				break;
 			case 4:
-				image.setImageResource(R.drawable.once);
+				image_receta.setImageResource(R.drawable.once);
 				break;
 			case 5:
-				image.setImageResource(R.drawable.cena);
-				break;
-	
-			default:
+				image_receta.setImageResource(R.drawable.cena);
 				break;
 		}
 		
-		receta.setTag(i.getRecetaId());
-		view.setTag(i.getRecetaId());
+		view.setTag(i.getIdReceta());
 		
 		return view;
 	}

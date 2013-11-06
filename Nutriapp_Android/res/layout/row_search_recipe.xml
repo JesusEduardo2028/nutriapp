@@ -1,71 +1,113 @@
-<LinearLayout
+<RelativeLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="120dp" 
+    android:layout_height="130dp" 
     android:gravity="center_vertical"
-    android:orientation="horizontal"
-    android:padding="5dp"
-    android:layout_margin="5dp"
-    android:background="@drawable/abs__ab_bottom_solid_light_holo">
+    android:padding="10dp" >
 	
     <ImageView
-        android:id="@+id/imageRecetaBus"
+        android:id="@+id/imagenReceta"
         android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="10dp"
+        android:layout_height="110dp"
         android:layout_marginRight="10dp"
         android:src="@drawable/desayuno" />
+    
+    <ImageView
+        android:id="@+id/imagenTipo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/imagenReceta"
+        android:layout_alignRight="@+id/imagenReceta"
+        android:src="@android:drawable/ic_delete" />
 	
-    <LinearLayout
-        android:layout_width="180dp"
+    <RelativeLayout
+        android:id="@+id/relativeReceta"
+        android:layout_width="190dp"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center_horizontal|bottom" >
+        android:layout_alignBottom="@+id/imagenReceta"
+        android:layout_alignTop="@+id/imagenReceta"
+        android:layout_toRightOf="@+id/imagenReceta"
+        android:paddingTop="5dp"
+        android:gravity="center_horizontal|top"
+        android:orientation="vertical" >
 		
     	<TextView
-	        android:id="@+id/tituloRecetaBus"
-        	android:layout_width="wrap_content"
+	        android:id="@+id/tituloReceta"
+        	android:layout_width="match_parent"
         	android:layout_height="wrap_content"
         	android:text="Nombre Plato"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+        	android:textStyle="bold"
+        	android:textSize="18sp" />
+    	
+    	<TextView
+		    android:id="@+id/nombreRestaurante"
+	      	android:layout_width="match_parent"
+	      	android:layout_height="wrap_content"
+	      	android:layout_below="@+id/tituloReceta"
+	      	android:text="Restaurante XXX"
+	       	android:textSize="14sp" />
 		
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nombreRestaurante"
+            android:layout_marginTop="2dp" >
 			
         	<TextView
-            	android:id="@+id/cRecetaBus"
+            	android:id="@+id/caloriasReceta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="C: 100"
+                android:text="calorias"
                 android:textColor="@android:color/holo_blue_bright" 
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:textSize="14sp" />
 			
         	<TextView
-                android:id="@+id/sRecetaBus"
+                android:id="@+id/sodioReceta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="S: 300"
-              	android:layout_marginLeft="10dp"
-                android:textColor="@android:color/holo_green_dark" />
+                android:layout_marginLeft="12dp"
+                android:text="sodio"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="14sp" />
 			
         	<TextView
-                android:id="@+id/fRecetaBus"
+                android:id="@+id/fibraReceta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="F: 200"
-                android:layout_marginLeft="10dp"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+                android:layout_marginLeft="12dp"
+                android:text="fibra"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_orange_dark" />
 			
    		</LinearLayout>
 
-        <Button
-        	android:id="@+id/verRecetaBus"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ver" />
-		
-	</LinearLayout>
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="2dp" >
 
-</LinearLayout>
+            <RatingBar
+                android:id="@+id/puntajeReceta"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="2dp"
+                android:max="5"
+                android:numStars="5"
+                android:stepSize="1"
+                style="?android:attr/ratingBarStyleSmall" />
+
+            <TextView
+                android:id="@+id/precioReceta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:text="$ 100.0"
+                android:textSize="17sp" />
+        </LinearLayout>
+        
+	</RelativeLayout>
+
+</RelativeLayout>

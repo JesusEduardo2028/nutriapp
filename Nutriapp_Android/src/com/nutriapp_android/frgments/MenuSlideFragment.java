@@ -32,8 +32,8 @@ public class MenuSlideFragment extends ListFragment {
 
 		adapter.add(new SampleItem("a", android.R.drawable.ic_menu_agenda));
 		adapter.add(new SampleItem("b", android.R.drawable.ic_menu_search));
-		adapter.add(new SampleItem("c",android.R.drawable.ic_menu_more));
-		adapter.add(new SampleItem("d",android.R.drawable.ic_menu_close_clear_cancel));
+		adapter.add(new SampleItem("c", android.R.drawable.ic_menu_more));
+		adapter.add(new SampleItem("d", android.R.drawable.ic_menu_close_clear_cancel));
 
 		setListAdapter(adapter);
 	}

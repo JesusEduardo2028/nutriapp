@@ -19,7 +19,7 @@
         android:layout_below="@+id/emblemQuery"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/input_textfield" >
         
         <com.nutriapp_android.adapter.MultiSpinnerAdapter

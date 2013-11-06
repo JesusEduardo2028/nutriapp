@@ -5,5 +5,17 @@
         android:title="@string/buscar_receta"
         android:icon="@drawable/action_search"
         android:showAsAction="ifRoom" />
+    
+    <item
+        android:id="@+id/itemAtras"
+        android:title="@string/navegacion_atras"
+        android:icon="@drawable/navigation_back"
+        android:showAsAction="always" />
+    
+    <item
+		android:id="@+id/itemSiguiente"
+	    android:title="@string/navegacion_siguiente"
+	    android:icon="@drawable/navigation_forward"
+	    android:showAsAction="always" />
 
 </menu>
